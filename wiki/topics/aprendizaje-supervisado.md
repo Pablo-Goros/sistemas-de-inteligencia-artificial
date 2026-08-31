@@ -1,0 +1,41 @@
+---
+title: "Aprendizaje supervisado"
+aliases: ["supervised learning", "perceptrón", "perceptrón multicapa", "MLP"]
+sources: ["OFF-001", "EXT-001"]
+related: ["aprendizaje-automatico", "evaluacion-de-modelos", "optimizacion-matematica", "aprendizaje-profundo"]
+prerequisites: ["aprendizaje-automatico", "optimizacion-matematica"]
+---
+
+# Aprendizaje supervisado
+
+## Overview
+
+En el aprendizaje supervisado se conocen los pares de entrada y salida esperada. El modelo ajusta sus parámetros para aproximar ese mapeo y luego producir predicciones para entradas nuevas. [OFF-001, pp. 27-29] [EXT-001, p. 13]
+
+## Core concepts
+
+- Una neurona calcula una combinación ponderada de entradas y aplica una función de activación. El perceptrón simple produce una frontera lineal; por eso no puede resolver directamente problemas no linealmente separables como XOR. [OFF-001, pp. 69-80]
+- El perceptrón multicapa compone capas de neuronas y funciones no lineales, lo que permite construir fronteras más expresivas. [OFF-001, pp. 81-84]
+- La propagación hacia adelante calcula la salida; la propagación hacia atrás calcula cómo contribuyen los parámetros al error y permite actualizarlos mediante descenso del gradiente. [OFF-001, pp. 84-90]
+- El entrenamiento puede ser incremental, por lotes o mediante mini-lotes; momentum, RMSProp, Adam y tasas adaptativas son variantes de optimización tratadas por el apunte. [OFF-001, pp. 88-92]
+
+## How it works
+
+Para cada entrada se calcula una salida, se compara con la etiqueta mediante una función de costo, se propaga el error hacia las capas anteriores y se actualizan los pesos. El proceso se repite sobre el conjunto de entrenamiento. [OFF-001, pp. 84-90]
+
+## Example
+
+Para resolver XOR, una red multicapa puede combinar regiones separadas por neuronas ocultas hasta producir una clasificación final no lineal. [OFF-001, pp. 81-83]
+
+## Relationships
+
+La [evaluación de modelos](evaluacion-de-modelos.md) mide si el mapeo aprendido generaliza. La [optimización matemática](optimizacion-matematica.md) fundamenta la actualización de pesos; el [aprendizaje profundo](aprendizaje-profundo.md) extiende la idea mediante redes más profundas.
+
+## Exam relevance
+
+Conviene explicar separabilidad lineal, arquitectura MLP, forward propagation, backpropagation y diferencias entre entrenamiento incremental y por lotes. [OFF-001, pp. 71-92]
+
+## Sources
+
+- [OFF-001, pp. 69-92]
+- [EXT-001, pp. 26-34]

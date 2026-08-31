@@ -1,1 +1,11 @@
-sources: []
+sources:
+  - id: OFF-001
+    title: "Reglamento y Apuntes de Sistemas de Inteligencia Artificial"
+    type: official
+    path: "official/SIA - Apunte Cátedra.pdf"
+    extracted: "extracted/OFF-001.md"
+  - id: EXT-001
+    title: "SIA - Resumen"
+    type: external
+    path: "external/SIA - Resumen.pdf"
+    extracted: "extracted/EXT-001.md"
