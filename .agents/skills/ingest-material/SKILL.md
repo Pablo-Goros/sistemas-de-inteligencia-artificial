@@ -31,18 +31,36 @@ For each classifiable source:
    `sources/external/`.
 3. Add the minimal catalog record: `id`, `title`, `type`, `path`, and
    `extracted` when an extract exists. Paths are relative to `sources/`.
-4. For a PDF, run:
+4. Create an ID-named searchable extract for supported formats:
 
    ```bash
+   # PDF, with page boundaries
    python scripts/extract_pdf.py sources/<type>/<file>.pdf --output sources/extracted/<SOURCE-ID>.md
+
+   # Video, synthesized from temporary audio/transcript/frame evidence
+   python scripts/extract_video.py sources/<type>/<file>.mp4 --output sources/extracted/<SOURCE-ID>.md
    ```
 
    Extraction is a regenerable retrieval aid, not authority. If important
    information depends on images, diagrams, formulas, tables, or spatial
    layout, inspect the original page when possible and do not infer missing
-   meaning from extracted text. For other formats, preserve the original and
-   create an ID-named searchable derivative only when the format can be
-   converted without academic interpretation.
+   meaning from extracted text. Video extraction is different: its durable
+   output is a concise, structured educational document synthesized from the
+   spoken and visual content, not a transcript. Audio, timestamped transcript
+   data, and sampled frames are disposable implementation details and must not
+   be cataloged or preserved as user-facing sources. The video extract should
+   combine related ideas, remove filler and repetition, preserve meaningful
+   examples, equations, diagrams, code, tables, and caveats, and use timestamps
+   only for major or especially useful moments. Processing is local-only: use
+   `faster-whisper` for speech recognition and the loopback Ollama service with
+   `qwen2.5vl:3b` for visual analysis and synthesis. It requires `ffmpeg`,
+   `ffprobe`, Ollama, and the Python dependencies, but no API key or paid remote
+   service. The script deletes source-specific intermediates after a successful
+   or failed run; reusable local model weights may remain cached. Before the
+   first run, verify Ollama is running and execute `ollama pull qwen2.5vl:3b`.
+   For other formats, preserve the original and create an ID-named searchable
+   derivative only when the format can be converted without academic
+   interpretation.
 
 ## Synthesize the wiki
 
@@ -59,8 +77,9 @@ Prefer links over repeated explanations. Maintain meaningful `related` and
 `prerequisites` relationships.
 
 Synthesize across sources according to `course.yaml` authority. Trace important
-claims with repository citations such as `[OFF-001, p. 12]` or
-`[EXT-003, pp. 45-47]`; do not cite general model knowledge as course evidence.
+claims with repository citations such as `[OFF-001, p. 12]`,
+`[EXT-003, pp. 45-47]`, or `[OFF-005, 00:34:20]` for a video; do not cite
+general model knowledge as course evidence.
 Add exam relevance only when repository evidence supports it, and distinguish
 explicit evidence from inference.
 

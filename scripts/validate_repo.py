@@ -43,6 +43,7 @@ REQUIRED_PATHS = (
     ".agents/skills/study/SKILL.md",
     ".agents/skills/audit-wiki/SKILL.md",
     "scripts/extract_pdf.py",
+    "scripts/extract_video.py",
     "scripts/validate_repo.py",
 )
 TOPIC_FIELDS = ("title", "aliases", "sources", "related", "prerequisites")
