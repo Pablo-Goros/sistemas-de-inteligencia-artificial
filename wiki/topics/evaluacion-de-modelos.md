@@ -1,7 +1,7 @@
 ---
 title: "Evaluación de modelos"
 aliases: ["métricas", "matriz de confusión", "sobreajuste", "cross-validation"]
-sources: ["OFF-001", "EXT-001"]
+sources: ["OFF-001", "OFF-010", "EXT-001"]
 related: ["aprendizaje-supervisado", "aprendizaje-automatico", "ciencia-de-datos"]
 prerequisites: ["aprendizaje-automatico"]
 ---
@@ -23,6 +23,10 @@ Evaluar un modelo implica medir sus aciertos y errores sobre datos apropiados y 
 
 En una clasificación binaria muy desbalanceada, predecir siempre la clase mayoritaria puede producir alta exactitud y, sin embargo, ser inútil. [OFF-001, p. 211]
 
+## Aplicación práctica
+
+En el TP 3 se debe justificar métricas y estrategia de partición para estimar fraude, además de recomendar un umbral de detección. Para clasificación de dígitos, el archivo de test se reserva como aproximación al comportamiento en producción; el TP exige analizar el efecto de arquitectura, tasa de aprendizaje y optimización antes de evaluar generalización. [OFF-010, pp. 3-5]
+
 ## Relationships
 
 La evaluación completa el ciclo de [aprendizaje supervisado](aprendizaje-supervisado.md) y permite comprobar la [generalización](aprendizaje-automatico.md) en un pipeline de aprendizaje automático.
@@ -34,4 +38,5 @@ Se debe poder leer una matriz de confusión, distinguir subajuste de sobreajuste
 ## Sources
 
 - [OFF-001, pp. 95-99, 210-211]
+- [OFF-010, pp. 3-5]
 - [EXT-001, pp. 31-34]

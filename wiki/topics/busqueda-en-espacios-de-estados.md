@@ -1,7 +1,7 @@
 ---
 title: "Búsqueda en espacios de estados"
 aliases: ["búsqueda", "state-space search", "A*", "heurística"]
-sources: ["OFF-001", "EXT-001"]
+sources: ["OFF-001", "OFF-008", "EXT-001"]
 related: ["agentes-y-ambientes", "mejoramiento-iterativo", "optimizacion-matematica"]
 prerequisites: ["agentes-y-ambientes"]
 ---
@@ -28,6 +28,10 @@ El algoritmo general mantiene una frontera y un conjunto de nodos explorados: ex
 
 Sokoban se presenta como un problema de búsqueda: las cajas, paredes, trabajador y destinos forman el estado; las acciones son movimientos válidos. Sus deadlocks muestran por qué una representación y una heurística adecuadas importan. [OFF-001, p. 43]
 
+## Aplicación práctica
+
+El TP 1 pide proponer una representación de estado, dos heurísticas admisibles no triviales y métodos de búsqueda para el 8-puzzle. Luego requiere implementar un motor para Sokoban o GridWorld con BFS, DFS, Greedy y A*, y comparar costo de solución, nodos expandidos, frontera y tiempo de procesamiento. [OFF-008, pp. 2-4]
+
 ## Relationships
 
 Los métodos de [mejoramiento iterativo](mejoramiento-iterativo.md) modifican soluciones sin mantener el mismo árbol de búsqueda. La [optimización matemática](optimizacion-matematica.md) aporta funciones objetivo y métodos para ajustar parámetros.
@@ -39,4 +43,5 @@ Se debe poder definir completitud, optimalidad, frontera, estados repetidos y he
 ## Sources
 
 - [OFF-001, pp. 35-43]
+- [OFF-008, pp. 2-4]
 - [EXT-001, pp. 5-10]

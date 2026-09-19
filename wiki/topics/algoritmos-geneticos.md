@@ -1,7 +1,7 @@
 ---
 title: "Algoritmos genéticos"
 aliases: ["genetic algorithms", "aptitud", "fitness", "crossover", "mutación"]
-sources: ["OFF-001", "EXT-001"]
+sources: ["OFF-001", "OFF-009", "EXT-001"]
 related: ["mejoramiento-iterativo", "optimizacion-matematica"]
 prerequisites: ["mejoramiento-iterativo"]
 ---
@@ -23,6 +23,10 @@ Un algoritmo genético es un método de optimización inspirado en evolución y 
 
 Se inicializa una población, se calcula el fitness, se seleccionan progenitores, se aplican crossover y mutación, y se construye la siguiente generación. El ciclo se repite hasta alcanzar un criterio de terminación. [OFF-001, pp. 50-55]
 
+## Aplicación práctica
+
+El TP 2 usa la aproximación de una imagen mediante triángulos como caso de diseño: exige definir individuo, genes y fitness, justificar cruza, mutación y criterio de parada, e implementar varias estrategias de selección y supervivencia. También pide reportar métricas como fitness, error y generaciones para defender la implementación. [OFF-009, pp. 2-4]
+
 ## Relationships
 
 Como el [mejoramiento iterativo](mejoramiento-iterativo.md), un algoritmo genético optimiza una función, pero trabaja con una población y no con una única solución vecina. La [optimización matemática](optimizacion-matematica.md) ofrece otra familia de métodos para ajustar objetivos.
@@ -34,4 +38,5 @@ Hay que distinguir individuo, gen, fitness, selección, crossover y mutación, y
 ## Sources
 
 - [OFF-001, pp. 49-55]
+- [OFF-009, pp. 2-4]
 - [EXT-001, pp. 17-22]

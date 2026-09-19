@@ -1,8 +1,8 @@
 ---
 title: "Aprendizaje supervisado"
-aliases: ["supervised learning", "perceptrón", "perceptrón multicapa", "MLP"]
-sources: ["OFF-001", "EXT-001"]
-related: ["aprendizaje-automatico", "evaluacion-de-modelos", "optimizacion-matematica", "aprendizaje-profundo"]
+aliases: ["supervised learning"]
+sources: ["OFF-001", "OFF-002", "OFF-003", "OFF-004", "EXT-001"]
+related: ["aprendizaje-automatico", "evaluacion-de-modelos", "optimizacion-matematica", "perceptron-simple", "perceptron-multicapa", "retropropagacion", "aprendizaje-profundo"]
 prerequisites: ["aprendizaje-automatico", "optimizacion-matematica"]
 ---
 
@@ -14,14 +14,14 @@ En el aprendizaje supervisado se conocen los pares de entrada y salida esperada.
 
 ## Core concepts
 
-- Una neurona calcula una combinación ponderada de entradas y aplica una función de activación. El perceptrón simple produce una frontera lineal; por eso no puede resolver directamente problemas no linealmente separables como XOR. [OFF-001, pp. 69-80]
-- El perceptrón multicapa compone capas de neuronas y funciones no lineales, lo que permite construir fronteras más expresivas. [OFF-001, pp. 81-84]
-- La propagación hacia adelante calcula la salida; la propagación hacia atrás calcula cómo contribuyen los parámetros al error y permite actualizarlos mediante descenso del gradiente. [OFF-001, pp. 84-90]
+- Una neurona calcula una combinación ponderada de entradas y aplica una función de activación. El [perceptrón simple](perceptron-simple.md) escalón produce una frontera lineal; por eso no puede resolver directamente problemas no linealmente separables como XOR. [OFF-001, pp. 69-80] [OFF-002, pp. 21-31]
+- El [perceptrón multicapa](perceptron-multicapa.md) compone capas de neuronas y funciones no lineales, lo que permite construir fronteras más expresivas. [OFF-001, pp. 81-84] [OFF-004, pp. 3-15]
+- La propagación hacia adelante calcula la salida; la [retropropagación](retropropagacion.md) calcula cómo contribuyen los parámetros al error y permite actualizarlos mediante descenso del gradiente. [OFF-001, pp. 84-90] [OFF-004, pp. 19-33, 39-50]
 - El entrenamiento puede ser incremental, por lotes o mediante mini-lotes; momentum, RMSProp, Adam y tasas adaptativas son variantes de optimización tratadas por el apunte. [OFF-001, pp. 88-92]
 
 ## How it works
 
-Para cada entrada se calcula una salida, se compara con la etiqueta mediante una función de costo, se propaga el error hacia las capas anteriores y se actualizan los pesos. El proceso se repite sobre el conjunto de entrenamiento. [OFF-001, pp. 84-90]
+Para cada entrada se calcula una salida, se compara con la etiqueta mediante una función de costo, se propaga el error hacia las capas anteriores y se actualizan los pesos. El proceso se repite sobre el conjunto de entrenamiento. [OFF-001, pp. 84-90] [OFF-004, pp. 19-33]
 
 ## Example
 
@@ -38,4 +38,7 @@ Conviene explicar separabilidad lineal, arquitectura MLP, forward propagation, b
 ## Sources
 
 - [OFF-001, pp. 69-92]
+- [OFF-002, pp. 21-46]
+- [OFF-003, pp. 8-26]
+- [OFF-004, pp. 3-58]
 - [EXT-001, pp. 26-34]

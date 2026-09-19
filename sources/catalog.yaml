@@ -9,3 +9,45 @@ sources:
     type: external
     path: "external/SIA - Resumen.pdf"
     extracted: "extracted/EXT-001.md"
+  - id: OFF-002
+    title: "Clase 10.1 - Perceptrón Simple Escalón"
+    type: official
+    path: "official/Clase 10.1 - Perceptrón Simple Escalón.pdf"
+    extracted: "extracted/OFF-002.md"
+  - id: OFF-003
+    title: "Clase 10.2 - Perceptrón Lineal y No Lineal"
+    type: official
+    path: "official/Clase 10.2 - Perceptrón Lineal y No Lineal.pdf"
+    extracted: "extracted/OFF-003.md"
+  - id: OFF-004
+    title: "Clase 11 - Perceptrón Multicapa"
+    type: official
+    path: "official/Clase 11 - Perceptrón Multicapa .PDF"
+    extracted: "extracted/OFF-004.md"
+  - id: OFF-005
+    title: "Perceptron Multicapa - arranque accidentado II"
+    type: official
+    path: "official/Perceptron Multicapa - arranque accidentado II.MP4"
+  - id: OFF-006
+    title: "Perceptron Multicapa - resto de la clase"
+    type: official
+    path: "official/Perceptron Multicapa - resto de la clase.MP4"
+  - id: OFF-007
+    title: "Perceptron Simple"
+    type: official
+    path: "official/Perceptron Simple.MP4"
+  - id: OFF-008
+    title: "Trabajo Práctico 1 - Métodos de Búsqueda"
+    type: official
+    path: "tps/Enunciado TP1(1) (2).pdf"
+    extracted: "extracted/OFF-008.md"
+  - id: OFF-009
+    title: "Trabajo Práctico 2 - Algoritmos Genéticos"
+    type: official
+    path: "tps/SIA - TP2 - 2026 2Q (2).pdf"
+    extracted: "extracted/OFF-009.md"
+  - id: OFF-010
+    title: "Trabajo Práctico 3 - Perceptrón Simple y Multicapa"
+    type: official
+    path: "tps/Enunciado TP3 - 2Q 2026.pdf"
+    extracted: "extracted/OFF-010.md"
