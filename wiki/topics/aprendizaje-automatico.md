@@ -1,7 +1,7 @@
 ---
 title: "Aprendizaje automático"
 aliases: ["machine learning", "ML", "generalización", "pipeline"]
-sources: ["OFF-001", "EXT-001"]
+sources: ["OFF-001", "OFF-002", "OFF-011", "EXT-001"]
 related: ["optimizacion-matematica", "aprendizaje-supervisado", "aprendizaje-no-supervisado", "aprendizaje-por-refuerzo", "ciencia-de-datos"]
 prerequisites: ["introduccion-inteligencia-artificial", "optimizacion-matematica"]
 ---
@@ -13,6 +13,8 @@ prerequisites: ["introduccion-inteligencia-artificial", "optimizacion-matematica
 El aprendizaje automático ajusta parámetros de un algoritmo para identificar relaciones o mapeos entre datos. El objetivo no es solo ajustar el conjunto conocido, sino generalizar a muestras nuevas. [OFF-001, pp. 27-29, 103-105]
 
 ## Core concepts
+
+- El mapa de técnicas oficial ubica clasificación y regresión dentro del aprendizaje supervisado; clustering, reglas de asociación y reducción de dimensionalidad dentro del no supervisado; y redes neuronales/aprendizaje profundo, ensembles y aprendizaje por refuerzo como otras familias de Machine Learning. [OFF-011, p. 12]
 
 - La matriz de datos `X` organiza muestras en filas y variables en columnas; una muestra puede tener una etiqueta `Y`. Las transformaciones convierten datos crudos en características más útiles. [OFF-001, pp. 27-28]
 - Los parámetros libres se ajustan mediante optimización; los hiperparámetros pertenecen al algoritmo y no se ajustan mediante la función de costo principal. [OFF-001, p. 28]
@@ -34,4 +36,5 @@ Se debe poder distinguir parámetros de hiperparámetros, aprendizaje de general
 ## Sources
 
 - [OFF-001, pp. 27-29, 103-105]
+- [OFF-011, pp. 4, 8, 12-14]
 - [EXT-001, pp. 3, 13, 23-25]

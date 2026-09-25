@@ -51,3 +51,13 @@ sources:
     type: official
     path: "tps/Enunciado TP3 - 2Q 2026.pdf"
     extracted: "extracted/OFF-010.md"
+  - id: OFF-011
+    title: "Machine Learning"
+    type: official
+    path: "official/MachineLearning.pdf"
+    extracted: "extracted/OFF-011.md"
+  - id: OFF-012
+    title: "Métodos de Optimización No Lineal Sin Restricciones: Un resumen"
+    type: official
+    path: "official/OptimizacionNOLineal (1).pdf"
+    extracted: "extracted/OFF-012.md"

@@ -1,7 +1,7 @@
 ---
 title: "Aprendizaje supervisado"
 aliases: ["supervised learning"]
-sources: ["OFF-001", "OFF-002", "OFF-003", "OFF-004", "EXT-001"]
+sources: ["OFF-001", "OFF-002", "OFF-003", "OFF-004", "OFF-011", "EXT-001"]
 related: ["aprendizaje-automatico", "evaluacion-de-modelos", "optimizacion-matematica", "perceptron-simple", "perceptron-multicapa", "retropropagacion", "aprendizaje-profundo"]
 prerequisites: ["aprendizaje-automatico", "optimizacion-matematica"]
 ---
@@ -14,6 +14,7 @@ En el aprendizaje supervisado se conocen los pares de entrada y salida esperada.
 
 ## Core concepts
 
+- La clasificación y la regresión son tareas de aprendizaje supervisado. [OFF-011, p. 12]
 - Una neurona calcula una combinación ponderada de entradas y aplica una función de activación. El [perceptrón simple](perceptron-simple.md) escalón produce una frontera lineal; por eso no puede resolver directamente problemas no linealmente separables como XOR. [OFF-001, pp. 69-80] [OFF-002, pp. 21-31]
 - El [perceptrón multicapa](perceptron-multicapa.md) compone capas de neuronas y funciones no lineales, lo que permite construir fronteras más expresivas. [OFF-001, pp. 81-84] [OFF-004, pp. 3-15]
 - La propagación hacia adelante calcula la salida; la [retropropagación](retropropagacion.md) calcula cómo contribuyen los parámetros al error y permite actualizarlos mediante descenso del gradiente. [OFF-001, pp. 84-90] [OFF-004, pp. 19-33, 39-50]
@@ -41,4 +42,5 @@ Conviene explicar separabilidad lineal, arquitectura MLP, forward propagation, b
 - [OFF-002, pp. 21-46]
 - [OFF-003, pp. 8-26]
 - [OFF-004, pp. 3-58]
+- [OFF-011, p. 12]
 - [EXT-001, pp. 26-34]
