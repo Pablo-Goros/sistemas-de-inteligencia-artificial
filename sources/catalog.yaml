@@ -61,3 +61,18 @@ sources:
     type: official
     path: "official/OptimizacionNOLineal (1).pdf"
     extracted: "extracted/OFF-012.md"
+  - id: OFF-013
+    title: "Clase 12.1 - Optimización (extras)"
+    type: official
+    path: "official/Clase 12.1 - Optimizacion.pdf"
+    extracted: "extracted/OFF-013.md"
+  - id: OFF-014
+    title: "Métricas de evaluación: métricas, sobreajuste y normalización"
+    type: official
+    path: "official/Clase 12.2 - Metricas y Ajustes.pdf"
+    extracted: "extracted/OFF-014.md"
+  - id: OFF-015
+    title: "Regularización"
+    type: official
+    path: "official/Clase 13 - Regularizacion.pdf"
+    extracted: "extracted/OFF-015.md"

@@ -1,7 +1,7 @@
 ---
 title: "Evaluación de modelos"
 aliases: ["métricas", "matriz de confusión", "sobreajuste", "cross-validation"]
-sources: ["OFF-001", "OFF-010", "EXT-001"]
+sources: ["OFF-001", "OFF-010", "OFF-014", "OFF-015", "EXT-001"]
 related: ["aprendizaje-supervisado", "aprendizaje-automatico", "ciencia-de-datos"]
 prerequisites: ["aprendizaje-automatico"]
 ---
@@ -13,6 +13,9 @@ prerequisites: ["aprendizaje-automatico"]
 Evaluar un modelo implica medir sus aciertos y errores sobre datos apropiados y verificar si aprendió un patrón generalizable. Una única métrica puede ser engañosa si el conjunto está desbalanceado o si se evalúa sobre los mismos datos usados para entrenar. [OFF-001, pp. 95-99, 210-211]
 
 ## Core concepts
+
+La matriz de confusión de la clase ubica las clases reales en las filas y las predicciones en las columnas. Presenta accuracy = `(TP + TN)/(TP + TN + FN + FP)`, precision = `TP/(TP + FP)`, recall = `TP/(TP + FN)` y F1 como media armónica de precision y recall. También define TPR = `TP/(TP + FN)` y FPR = `FP/(FP + TN)`. [OFF-014, pp. 10, 14-16]
+
 
 - La matriz de confusión organiza verdaderos positivos, verdaderos negativos, falsos positivos y falsos negativos para una clasificación. [OFF-001, p. 96]
 - A partir de esos conteos se construyen métricas estándar; su interpretación depende del costo relativo de cada tipo de error. [OFF-001, pp. 95-97]
@@ -39,4 +42,6 @@ Se debe poder leer una matriz de confusión, distinguir subajuste de sobreajuste
 
 - [OFF-001, pp. 95-99, 210-211]
 - [OFF-010, pp. 3-5]
+- [OFF-014, pp. 4-8, 10-30]
+- [OFF-015, pp. 3-7]
 - [EXT-001, pp. 31-34]

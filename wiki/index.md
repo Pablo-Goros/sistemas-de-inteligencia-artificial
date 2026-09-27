@@ -19,6 +19,8 @@
 - [Aprendizaje supervisado](topics/aprendizaje-supervisado.md)
 - [Evaluación de modelos](topics/evaluacion-de-modelos.md)
 - [Aprendizaje no supervisado](topics/aprendizaje-no-supervisado.md)
+- [Regularización](topics/regularizacion.md)
+- [Normalización de datos](topics/normalizacion-de-datos.md)
 - [Perceptrón simple](topics/perceptron-simple.md)
 - [Perceptrón multicapa](topics/perceptron-multicapa.md)
 - [Retropropagación](topics/retropropagacion.md)

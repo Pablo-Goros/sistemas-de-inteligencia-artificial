@@ -1,7 +1,7 @@
 ---
 title: "Optimización matemática"
 aliases: ["optimización", "gradiente descendente", "gradient descent", "SGD", "simplex"]
-sources: ["OFF-001", "OFF-012", "EXT-001"]
+sources: ["OFF-001", "OFF-012", "OFF-013", "EXT-001"]
 related: ["aprendizaje-automatico", "aprendizaje-supervisado", "mejoramiento-iterativo"]
 prerequisites: []
 ---
@@ -13,6 +13,11 @@ prerequisites: []
 La optimización matemática busca parámetros que minimicen o maximicen una función objetivo, posiblemente bajo restricciones. En IA permite ajustar pesos y parámetros libres para reducir una función de costo. [OFF-001, pp. 59-63]
 
 ## Core concepts
+
+Momentum suma una fracción de la actualización anterior a la corrección del gradiente; la clase lo relaciona con atravesar regiones planas y amortiguar oscilaciones. [OFF-013, p. 5]
+
+La clase propone ajustar la tasa de aprendizaje según la evolución del error: aumentarla ante una disminución sostenida y reducirla cuando el error crece para evitar divergencia. RMSProp escala el gradiente con el promedio móvil de sus cuadrados; Adam combina estimaciones de primer y segundo momento y corrige su sesgo inicial. [OFF-013, pp. 6-13]
+
 
 - Para una función diferenciable, gradiente nulo y Hessiano semidefinido positivo son condiciones necesarias de mínimo local; un Hessiano definido positivo da la condición suficiente presentada. [OFF-012, pp. 18-19]
 - Una dirección de decrecimiento tiene producto interno negativo con el gradiente. Momentum combina direcciones recientes para suavizar el zigzag; Newton usa el Hessiano y los métodos cuasi-Newton aproximan su inversa para reducir ese costo. [OFF-012, pp. 24, 28-30]
@@ -41,4 +46,5 @@ Es importante interpretar función objetivo, restricciones, gradiente, Hessiano 
 
 - [OFF-001, pp. 59-68]
 - [OFF-012, pp. 11-31, 38-48]
+- [OFF-013, pp. 2-13]
 - [EXT-001, pp. 23-25]
