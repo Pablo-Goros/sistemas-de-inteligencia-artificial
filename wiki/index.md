@@ -6,6 +6,7 @@
 - [Agentes y ambientes](topics/agentes-y-ambientes.md)
 - [Aprendizaje automático](topics/aprendizaje-automatico.md)
 - [Optimización matemática](topics/optimizacion-matematica.md)
+- [Autovalores y autovectores](topics/autovalores-y-autovectores.md)
 
 ## Resolución y búsqueda
 
@@ -19,6 +20,9 @@
 - [Aprendizaje supervisado](topics/aprendizaje-supervisado.md)
 - [Evaluación de modelos](topics/evaluacion-de-modelos.md)
 - [Aprendizaje no supervisado](topics/aprendizaje-no-supervisado.md)
+- [Mapas autoorganizados de Kohonen](topics/mapas-autoorganizados-de-kohonen.md)
+- [Análisis de componentes principales](topics/analisis-componentes-principales.md)
+- [Reglas de Oja y Sanger](topics/reglas-de-oja-y-sanger.md)
 - [Regularización](topics/regularizacion.md)
 - [Normalización de datos](topics/normalizacion-de-datos.md)
 - [Perceptrón simple](topics/perceptron-simple.md)

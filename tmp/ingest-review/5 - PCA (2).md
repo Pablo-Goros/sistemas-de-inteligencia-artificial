@@ -1,0 +1,438 @@
+# Extracted source: 5 - PCA (2)
+
+## Page 1
+
+APRENDIZAJE
+NO SUPERVISADO
+Análisis de Componentes Principales
+Sistemas de Inteligencia Artiﬁcial - 2026
+
+## Page 2
+
+TABLA DE CONTENIDOS
+01. INTRODUCCIÓN
+02. MODELO DE
+KOHONEN
+03. MODELO DE
+HOPFIELD
+04.
+05.
+06.
+2
+AUTOVALORES Y
+AUTOVECTORES
+COMPONENTES
+PRINCIPALES
+REGLA DE OJA Y
+SANGER
+
+## Page 3
+
+05
+ANÁLISIS DE
+COMPONENTES
+PRINCIPALES
+3
+
+## Page 4
+
+05.1
+INTRODUCCIÓN
+4
+
+[Very little text was extracted; inspect the original page for visual content.]
+
+## Page 5
+
+EJEMPLO
+5
+Se cuenta con un conjunto de datos tomado de una competencia de natación. Los nadadores
+debieron recorrer 4 tramos y se tomaron los siguientes tiempos (min):
+NADADOR TR1 TR2 TR3 TR4
+1 10 10 13 12
+2 12 12 14 15
+3 11 10 14 13
+4 9 9 11 11
+5 8 8 9 8
+6 8 9 10 9
+7 10 10 8 9
+
+## Page 6
+
+6
+EJEMPLO
+Para una investigación se seleccionan al azar 3500 pacientes hipertensos sobre los que
+se midieron las siguiente variables:
+● Edad
+● Duración de los síntomas (cantidad de días)
+● Colesterol (mg/dl)
+● Sexo
+● Peso (kg)
+● Presión arterial media (mm Hg)
+● Medida del estrés
+Se desea saber si el paciente presenta una enfermedad arterial o no
+
+## Page 7
+
+MEDIDAS DESCRIPTIVAS
+7
+Dado un conjunto de datos de una variable
+MEDIA MUESTRAL
+ VARIANZA MUESTRAL
+NOTA: Se toma una parte de la población
+
+## Page 8
+
+8
+Dado un conjunto de datos con n variables y m observaciones.
+La covarianza muestral mide la asociación lineal entre las variables Xi y Xk
+COVARIANZA MUESTRAL
+MEDIDAS DESCRIPTIVAS
+
+## Page 9
+
+MATRIZ DE COVARIANZAS
+9
+Las covarianzas forman una matriz simétrica deﬁnida positiva:
+
+## Page 10
+
+10
+INTERPRETACIÓN COVARIANZA MUESTRAL
+Sea sik la covarianza muestral entre las variables Xi y Xk
+● Sik  > 0  indica asociación lineal positiva entre los datos de las variables
+● Sik  < 0  indica asociación lineal negativa entre los datos de las variables
+● Sik  = 0  indica que las variables son independientes
+Nota:
+La varianza muestral es la covarianza muestral entre los datos de la variable Xi con ella misma
+(se puede denotar como Sii)
+
+## Page 11
+
+CORRELACIÓN MUESTRAL
+11
+La correlación muestral es otra medida de asociación lineal.
+Es la covarianza muestral con las variables estandarizadas.
+La correlación muestral para las variables Xi y Xk se deﬁne como:
+VARIABLE ESTANDARIZADA
+__
+~
+
+## Page 12
+
+05.2
+PCA
+12
+
+[Very little text was extracted; inspect the original page for visual content.]
+
+## Page 13
+
+ANÁLISIS DE COMPONENTES PRINCIPALES
+13
+Si las variables de un conjunto de datos están muy correlacionadas entonces posee
+información redundante
+El objetivo del método de Principal Component Analysis (PCA)
+ es eliminar la redundancia
+¿CÓMO?
+
+## Page 14
+
+ANÁLISIS DE COMPONENTES PRINCIPALES
+14
+Transformar el conjunto de variables original en otro conjunto
+Tendrá variables que son combinaciones lineales de las anteriores
+pero no están correlacionadas entre sí
+CONJUNTO DE COMPONENTES PRINCIPALES
+
+## Page 15
+
+PCA - HISTORIA
+15
+Técnica publicada por H. Hotelling en 1933.
+Las primeras versiones se encuentran en los ajustes ortogonales por cuadrados mínimos
+introducidos por K. Pearson en 1901.
+Paper
+
+## Page 16
+
+PCA
+16
+Dadas p variables originales:
+Se desean encontrar q < p variables que sean combinaciones lineales de las p originales,
+recogiendo la mayor parte de la información o variabilidad de los datos.
+Si las variables originales no están correlacionadas, entonces no tiene sentido realizar un
+Análisis de Componentes Principales.
+Se hallan p componentes principales
+
+## Page 17
+
+PCA
+17
+PCA
+Interactive PCA Example
+
+## Page 18
+
+PCA - VARIABILIDAD
+18
+¿Cómo sabemos que la variable “es principal”?
+Se toma la característica que maximiza la variabilidad, es un buen factor para diferenciar
+objetos en un conjunto de datos.
+Ejemplo:
+Se tiene un conjunto de datos de vehículos.
+● Característica 1: Color
+● Característica 2: Cantidad de ruedas
+● Característica 3: Longitud del vehículo (Mayor variabilidad)
+
+## Page 19
+
+PCA - TRANSFORMACIÓN
+19
+Sea Xnxp una matriz con:
+● n elementos de la población
+● p variables
+Sea realiza una transformación de X de forma tal que la varianza del nuevo conjunto de
+variables sea máxima
+
+## Page 20
+
+LA PRIMERA COMPONENTE
+20
+Sea        la primera componente principal, y un vector de cargas
+Nota: si las variables están estandarizadas no es necesario restar la media
+
+## Page 21
+
+CARGAS
+21
+El conjunto de componentes principales es una combinación lineal de las variables originales.
+Se desea encontrar la carga                                     y la                     resulte máxima
+Los coeﬁcientes                                                         se denominan cargas (loadings)
+¿Cómo hallar las cargas?
+Son los autovectores de la matriz de covarianzas (o correlaciones)
+
+## Page 22
+
+BUSCAMOS AyA
+22
+Para hallar las componentes principales se deben calcular los autovectores vi
+correspondientes a las cargas
+Entonces las componentes se calculan como:
+
+## Page 23
+
+23
+El autovalor         se corresponde con la varianza de la componente i
+BUSCAMOS AyA
+Ordenando los autovalores de mayor a menor se logra reducir la dimensionalidad
+tomando los autovectores correspondientes a los primeros q autovalores, que son los que
+proveen mayor información (en términos de variabilidad).
+
+## Page 24
+
+05.3
+COVARIANZA vs
+CORRELACIÓN
+24
+
+## Page 25
+
+COVARIANZA vs CORRELACIÓN
+25
+Si alguna de las variables toma valores mayores a las demás entonces tendrá mayor
+varianza, pero no quiere decir que tenga mayor variabilidad.
+Cuando las escalas de medida de las variables son muy distintas, la maximización de la
+varianza depende decisivamente de estas escalas de medida y las variables con valores
+más grandes tendrán más peso en el análisis.
+
+## Page 26
+
+COVARIANZA vs CORRELACIÓN
+26
+Para evitar el problema se deben estandarizar las variables
+cuando calculamos las componentes principales
+De esta manera las magnitudes de los valores numéricos de las variables originales serán
+comparables
+
+## Page 27
+
+COVARIANZA vs CORRELACIÓN
+27
+Esto equivale a aplicar el análisis de componentes principales utilizando la
+matriz de correlaciones en lugar de la matriz de covarianzas.
+Cuando las variables tienen las mismas unidades, ambas alternativas son posibles.
+
+## Page 28
+
+EJERCICIO
+28
+Sea la matriz de correlaciones:
+correspondiente a las variables aleatorias
+Ejercicio:
+Escribir las variables                     de componentes principales y calcular qué
+proporción de la varianza total explica cada componente.
+
+## Page 29
+
+29
+Sabemos que
+El primer autovector es                                           que se corresponde con el mayor autovalor
+El mayor autovalor es la varianza de
+SOLUCIÓN
+
+## Page 30
+
+30
+SOLUCIÓN
+AUTOVALORES
+AUTOVECTORES
+
+## Page 31
+
+SOLUCIÓN
+31
+AUTOVALORES
+La proporción de la varianza de cada componente es:
+De Y1 = 6/11
+De Y2 = 3/11
+De Y3 = 2/11
+
+## Page 32
+
+PROCEDIMIENTO
+32
+1. Construir la matriz X a partir del dataset, poniendo las variables en
+columnas
+2. Estandarizar las variables X
+3. Calcular la matriz de correlaciones Sx
+4. Calcular AyA
+5. Ordenar los autovalores de mayor a menor
+6. Construir la matriz V con los autovectores con mayor autovalor
+7. Calcular las nuevas variables Y como combinación lineal de las originales
+
+## Page 33
+
+05.4
+INTERPRETACIÓN
+33
+
+## Page 34
+
+INTERPRETACIÓN DE PC1
+34
+EJEMPLO:
+Los datos de una encuesta de presupuestos familiares en distintas provincias, presentan
+los gastos medios de las familias utilizando seis variables:
+● X1: alimentación
+● X2: vestido y calzado
+● X3: vivienda
+● X4: mobiliario doméstico
+● X5: salud
+● X6: educación y cultura
+
+## Page 35
+
+INTERPRETACIÓN DE PC1
+35
+Calculamos el primer autovector y obtenemos PC1:
+¿Qué información nos brinda?
+
+## Page 36
+
+INTERPRETACIÓN DE PC1
+36
+Calculamos el primer autovector y obtenemos PC1:
+● Y1 es una suma ponderada de todos los gastos, con mayor carga, de las variables:
+X1 alimentación, X5 salud y X6 educación.
+● El menor peso lo tiene el gasto en X2 vestido y calzado.
+
+## Page 37
+
+37
+INTERPRETACIÓN DE PC1
+Si calculamos los valores de Y1 para cada provincia y las ordenamos por esta nueva variable
+quedan ordenadas por sus gastos.
+Explicación inmediata: muestra la capacidad de gasto
+
+## Page 38
+
+INTERPRETACIÓN DE PC1
+38
+● Si la carga (coeﬁciente o loading ) de una variable en la componente principal es
+positiva, signiﬁca que la variable y la componente tienen una correlación positiva.
+● Si la carga es negativa, la variable se correlaciona en forma negativa con la primera
+componente.
+● La primera componente representa un ı ́ ndice (o una caracterı ́ stica) por el cual se
+pueden ordenar los registros.
+
+## Page 39
+
+05.5
+EJERCICIO CHATBOT
+39
+
+## Page 40
+
+EJEMPLO
+Una compañía B2B brinda soluciones de servicio al cliente a través del desarrollo de
+chatbots.
+Se desea optimizar el ﬂujo del chatbot con el objetivo de:
+● automatizar el proceso de ventas de un cliente
+● recurrir a asistencia humana lo menos posible
+● mejorar la experiencia de usuario
+
+40
+
+## Page 41
+
+EJEMPLO
+41
+ Para ello se recopilan datos sobre las interacciones de los usuarios con el chatbot:
+1. Longitud del input del usuario (cantidad de palabras/tokens)
+2. Longitud del mensaje enviado por el chatbot (cantidad de palabras/tokens)
+3. Índice de complejidad de la respuesta del chatbot
+4. Tiempo de respuesta
+5. Frecuencia de solicitudes de input hechas por el bot al usuario
+6. Satisfacción del usuario (1 al 10)
+7. Frecuencia de input types (text, images, voice, emojis)
+8. Cantidad de interacciones del usuario por sesión
+9. Número de excepciones
+10. Solicitudes de asistencia humana
+
+## Page 42
+
+EJEMPLO
+42
+Se cuenta con un conjunto de datos con:
+● 10 variables o atributos (columnas)
+● 26 observaciones (ﬁlas)
+El conjunto de datos es multivariado
+¿Cuáles son las variables que más inﬂuyen en la satisfacción del usuario?
+
+## Page 43
+
+BOXPLOT
+43
+
+[Very little text was extracted; inspect the original page for visual content.]
+
+## Page 44
+
+BOXPLOT
+44
+Si estandarizamos las variables
+
+## Page 45
+
+BIPLOT
+45
+Valores de las Componentes Principales 1 y 2
+
+## Page 46
+
+INDICE
+46
+Índice a partir del cálculo
+de la PC1
+Autovector opuesto

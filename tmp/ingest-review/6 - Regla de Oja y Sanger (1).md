@@ -1,0 +1,165 @@
+# Extracted source: 6 - Regla de Oja y Sanger (1)
+
+## Page 1
+
+APRENDIZAJE
+NO SUPERVISADO
+Regla de Oja y Sanger
+Sistemas de Inteligencia Artiﬁcial - 2026
+
+## Page 2
+
+TABLA DE CONTENIDOS
+01. INTRODUCCIÓN
+02. MODELO DE
+KOHONEN
+03. MODELO DE
+HOPFIELD
+04.
+05.
+06.
+2
+AUTOVALORES Y
+AUTOVECTORES
+COMPONENTES
+PRINCIPALES
+REGLA DE OJA Y
+SANGER
+
+## Page 3
+
+06.1
+COMPONENTES
+PRINCIPALES
+Repaso
+3
+
+## Page 4
+
+4
+COMPONENTES PRINCIPALES
+Repaso:
+Componentes principales
+Utilizadas para extraer caracterı ́ sticas destacadas o importantes
+de un conjunto de datos bajando la dimensión.
+
+## Page 5
+
+5
+COMPONENTES PRINCIPALES
+
+Algunos modelos de redes neuronales permiten calcular las componentes principales en
+forma iterativa:
+● Ventaja: reduce costo computacional (cantidad de registros muy grande, o muchas
+variables)
+
+● Desventaja:  Si el dataset tiene muchas variables, interpretarlo en una sola se puede
+perder información, al reducir tan drásticamente la dimensión.
+
+## Page 6
+
+06
+REGLA DE OJA Y
+SANGER
+6
+
+## Page 7
+
+7
+PERCEPTRON LINEAL SIMPLE
+Dados n datos de entrada, x1 , . . . , xn ,  una red neuronal calcula la salida
+
+Actualizar los pesos,
+
+## Page 8
+
+8
+APRENDIZAJE HEBBIANO
+Regla de Aprendizaje Hebbiano para Aprendizaje No supervisado
+Dados m datos de entrada, x 1 , . . . , x m ,  una red neuronal calcula la salida
+
+No se conoce el valor de verdad, entonces:
+
+## Page 9
+
+9
+CONVERGENCIA
+Oja demostró que:
+Si la red anterior converge, el vector de pesos resultante wﬁnal serı ́ a un punto sobre la
+dirección de máxima variación de los datos ( la primer componente principal.)
+Pero...
+El problema es que no converge porque el           va aumentando en cada paso y se hace tan
+grande que produce que el algoritmo sea inestable.
+
+## Page 10
+
+10
+REGLA DE OJA
+
+ Dr. Erkki Oja, Helsinki University of Technology, Finland
+
+## Page 11
+
+11
+REGLA DE OJA
+Utilizando el polinomio de Taylor
+
+## Page 12
+
+12
+|w| se mantiene acotado. Tiende a 1
+Luego de varias iteraciones el método converge al autovector correspondiente al mayor
+autovalor de la matriz de correlaciones de los datos de entrada.
+Con este vector w ﬁnal se construye la primera componente principal.
+y1 = a1x1 + … + anxn
+Los ai forman el primer autovector que sería el wﬁnal
+CONVERGENCIA
+
+## Page 13
+
+13
+CONVERGENCIA
+
+[Very little text was extracted; inspect the original page for visual content.]
+
+## Page 14
+
+14
+TASA DE APRENDIZAJE
+Para asegurar la convergencia
+Como no conocemos el autovalor es mejor estandarizar todas las variables de entradas
+y comenzar con
+
+## Page 15
+
+15
+IMPLEMENTACIÓN
+Arquitectura
+Es un perceptrón simple con una capa de salida
+Actualización de Pesos
+Según la Regla de Oja
+Inicialización de Pesos
+Distribución uniforme entre 0 y 1
+Tasa de Aprendizaje
+eta(0) = 0.5 y disminuye
+o eta = 10-3
+
+## Page 16
+
+16
+ALGORITMO
+input: X datos de dimensión N con media 0; η, w inicial con distribución uniforme entre 0 y 1
+for epoch in #epochs
+for i=1 to N
+y = inner(xi, w )   #calcular el output
+w += η ∗ y ∗ (xi − y ∗ w ) #actualizar según regla de oja
+return(w)
+
+## Page 17
+
+17
+REGLA DE SANGER
+Extensión de la regla de Oja
+● Converge a la matriz de autovectores de la matriz de covarianzas de los
+datos.
+● Permite encontrar todas las componentes principales (k autovectores)

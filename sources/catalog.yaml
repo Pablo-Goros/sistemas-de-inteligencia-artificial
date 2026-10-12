@@ -24,32 +24,20 @@ sources:
     type: official
     path: "official/Clase 11 - Perceptrón Multicapa .PDF"
     extracted: "extracted/OFF-004.md"
-  - id: OFF-005
-    title: "Perceptron Multicapa - arranque accidentado II"
-    type: official
-    path: "official/Perceptron Multicapa - arranque accidentado II.MP4"
-  - id: OFF-006
-    title: "Perceptron Multicapa - resto de la clase"
-    type: official
-    path: "official/Perceptron Multicapa - resto de la clase.MP4"
-  - id: OFF-007
-    title: "Perceptron Simple"
-    type: official
-    path: "official/Perceptron Simple.MP4"
   - id: OFF-008
     title: "Trabajo Práctico 1 - Métodos de Búsqueda"
     type: official
-    path: "tps/Enunciado TP1(1) (2).pdf"
+    path: "tps/tp1.pdf"
     extracted: "extracted/OFF-008.md"
   - id: OFF-009
     title: "Trabajo Práctico 2 - Algoritmos Genéticos"
     type: official
-    path: "tps/SIA - TP2 - 2026 2Q (2).pdf"
+    path: "tps/tp2.pdf"
     extracted: "extracted/OFF-009.md"
   - id: OFF-010
     title: "Trabajo Práctico 3 - Perceptrón Simple y Multicapa"
     type: official
-    path: "tps/Enunciado TP3 - 2Q 2026.pdf"
+    path: "tps/tp3.pdf"
     extracted: "extracted/OFF-010.md"
   - id: OFF-011
     title: "Machine Learning"
@@ -76,3 +64,33 @@ sources:
     type: official
     path: "official/Clase 13 - Regularizacion.pdf"
     extracted: "extracted/OFF-015.md"
+  - id: OFF-016
+    title: "Introducción al aprendizaje no supervisado"
+    type: official
+    path: "official/1 - Introducción Aprendizaje No Supervisado.pdf"
+    extracted: "extracted/OFF-016.md"
+  - id: OFF-017
+    title: "Modelo de Kohonen"
+    type: official
+    path: "official/2 - Modelo de Kohonen.pdf"
+    extracted: "extracted/OFF-017.md"
+  - id: OFF-018
+    title: "Autovalores y autovectores"
+    type: official
+    path: "official/4 - Autovalores y Autovectores (1).pdf"
+    extracted: "extracted/OFF-018.md"
+  - id: OFF-019
+    title: "Análisis de componentes principales"
+    type: official
+    path: "official/5 - PCA (2).pdf"
+    extracted: "extracted/OFF-019.md"
+  - id: OFF-020
+    title: "Regla de Oja y Sanger"
+    type: official
+    path: "official/6 - Regla de Oja y Sanger (1).pdf"
+    extracted: "extracted/OFF-020.md"
+  - id: PA-001
+    title: "Trabajo Práctico 4 - Métodos de Aprendizaje NO Supervisado"
+    type: practical_assignment
+    path: "practical-assignment/tp4.pdf"
+    extracted: "extracted/PA-001.md"
