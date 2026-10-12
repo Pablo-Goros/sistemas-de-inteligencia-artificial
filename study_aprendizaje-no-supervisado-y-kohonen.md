@@ -63,7 +63,7 @@ Wiki de apoyo: [aprendizaje automático](wiki/topics/aprendizaje-automatico.md),
    - Ejemplo previsto: comparar dos inicializaciones y dos valores de tasa en una actualización; explicar por qué acercarse a la muestra actual no equivale a acercarse simultáneamente a todas las muestras.
    - Fuentes: OFF-017, pp. 24, 26-31, 38; OFF-001, pp. 28, 121-122.
 
-7. [en progreso] Lectura de resultados, aplicaciones y límites del SOM
+7. [cubierto] Lectura de resultados, aplicaciones y límites del SOM
    - Alcance: interpretar asignaciones, ocupación de neuronas, matriz U y mapas de una variable; cerrar la relación entre estructura no supervisada y representación bidimensional.
    - Resultados de aprendizaje: distinguir cuántos registros llegan a una neurona de las distancias entre representantes; describir qué calcula la matriz U; usar los mapas para comparar regiones del conjunto de datos; reconocer límites de la visualización y del método.
    - Esquema de investigación: coordenadas de las entradas en el mapa; conteos por neurona; promedio de distancias euclídeas a representantes vecinos; visualización de una variable; ejemplo de ciudades y grilla `20 × 20`; variables numéricas, pérdida de detalle al representar muchas dimensiones y elección del tamaño de grilla. Tratar la comparación de rapidez con MLP como una posibilidad indicada por la clase, no como garantía universal.
