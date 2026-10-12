@@ -1,3 +1,5 @@
 tps_sia
 __pycache__/
 *.py[cod]
+/tmp/*
+!/tmp/.gitkeep
