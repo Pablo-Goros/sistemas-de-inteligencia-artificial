@@ -94,3 +94,18 @@ sources:
     type: practical_assignment
     path: "practical-assignment/tp4.pdf"
     extracted: "extracted/PA-001.md"
+  - id: OFF-021
+    title: "Deep Learning - Rodrigo Ramele"
+    type: official
+    path: "official/DL.pdf"
+    extracted: "extracted/OFF-021.md"
+  - id: PA-002
+    title: "Trabajo Práctico 1 - Métodos de Búsqueda"
+    type: practical_assignment
+    path: "practical-assignment/tp1.pdf"
+    extracted: "extracted/PA-002.md"
+  - id: PA-003
+    title: "Trabajo Práctico 2 - Algoritmos Genéticos"
+    type: practical_assignment
+    path: "practical-assignment/tp2.pdf"
+    extracted: "extracted/PA-003.md"

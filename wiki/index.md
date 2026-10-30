@@ -32,6 +32,8 @@
 - [Autoencoders](topics/autoencoders.md)
 - [Redes neuronales convolucionales](topics/redes-neuronales-convolucionales.md)
 - [Redes generativas adversarias](topics/redes-generativas-adversarias.md)
+- [Redes neuronales recurrentes](topics/redes-neuronales-recurrentes.md)
+- [Modelos de difusión](topics/modelos-de-difusion.md)
 - [Transformers](topics/transformers.md)
 
 ## Práctica y datos
