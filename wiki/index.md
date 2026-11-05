@@ -6,6 +6,8 @@
 - [Agentes y ambientes](topics/agentes-y-ambientes.md)
 - [Aprendizaje automático](topics/aprendizaje-automatico.md)
 - [Optimización matemática](topics/optimizacion-matematica.md)
+- [Teoría de la información](topics/teoria-de-la-informacion.md)
+- [Muestreo de distribuciones](topics/muestreo-de-distribuciones.md)
 
 ## Resolución y búsqueda
 
@@ -26,6 +28,7 @@
 - [Retropropagación](topics/retropropagacion.md)
 - [Aprendizaje profundo](topics/aprendizaje-profundo.md)
 - [Autoencoders](topics/autoencoders.md)
+- [Autoencoders variacionales](topics/autoencoders-variacionales.md)
 - [Redes neuronales convolucionales](topics/redes-neuronales-convolucionales.md)
 - [Redes generativas adversarias](topics/redes-generativas-adversarias.md)
 - [Transformers](topics/transformers.md)

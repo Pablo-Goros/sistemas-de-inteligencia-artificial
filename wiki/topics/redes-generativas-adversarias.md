@@ -1,7 +1,7 @@
 ---
 title: "Redes generativas adversarias"
 aliases: ["GAN", "Generative Adversarial Network", "generador", "discriminador", "colapso modal"]
-sources: ["OFF-001", "EXT-001"]
+sources: ["OFF-001", "EXT-001", "OFF-020"]
 related: ["aprendizaje-profundo", "autoencoders", "optimizacion-matematica"]
 prerequisites: ["aprendizaje-profundo", "optimizacion-matematica"]
 ---
@@ -23,6 +23,10 @@ Una GAN contiene un Generador que produce muestras y un Discriminador que intent
 
 Se alterna el entrenamiento del Discriminador y del Generador. El primero maximiza su capacidad de clasificación; el segundo minimiza la capacidad del discriminador para identificar sus muestras. [OFF-001, pp. 188-190]
 
+## Aplicación práctica: temas de ensayo y debate
+
+El TP6 incluye las GAN entre las áreas posibles para un ensayo de postura personal y propone lecturas sobre aplicaciones, generación de contenido sintético y escasez de datos. La consigna ofrece esos disparadores para elegir un tema; no exige entrenar una GAN ni establece que los datos sintéticos resuelvan siempre la falta de datos. Las condiciones del ensayo y debate se resumen en [introducción a la IA](introduccion-inteligencia-artificial.md). [OFF-020, pp. 2, 5]
+
 ## Relationships
 
 Las GAN son modelos generativos de [aprendizaje profundo](aprendizaje-profundo.md). Los [autoencoders](autoencoders.md) también modelan representaciones y generación, pero parten de una reconstrucción y no de dos redes adversarias.
@@ -35,3 +39,4 @@ Hay que identificar los roles de Generador y Discriminador, formular la intuici�
 
 - [OFF-001, pp. 187-190]
 - [EXT-001, pp. 52-53]
+- [OFF-020, pp. 2, 5]

@@ -76,3 +76,28 @@ sources:
     type: official
     path: "official/Clase 13 - Regularizacion.pdf"
     extracted: "extracted/OFF-015.md"
+  - id: OFF-016
+    title: "Sistemas de Inteligencia Artificial - Autoencoders (2026)"
+    type: official
+    path: "official/Autoencoders.pdf"
+    extracted: "extracted/OFF-016.md"
+  - id: OFF-017
+    title: "Sistemas de Inteligencia Artificial - Repaso (2025)"
+    type: official
+    path: "official/Capsule.pdf"
+    extracted: "extracted/OFF-017.md"
+  - id: OFF-018
+    title: "Transformers - Sistemas de Inteligencia Artificial (2026)"
+    type: official
+    path: "official/Transformers.pdf"
+    extracted: "extracted/OFF-018.md"
+  - id: OFF-019
+    title: "Trabajo Práctico 5 - Deep Learning: Autoencoders y VAE"
+    type: official
+    path: "tps/SIATP5.pdf"
+    extracted: "extracted/OFF-019.md"
+  - id: OFF-020
+    title: "Trabajo Práctico 6 - Informe y debate (2026)"
+    type: official
+    path: "tps/SIA - Trabajo Practico 6 (1).pdf"
+    extracted: "extracted/OFF-020.md"
