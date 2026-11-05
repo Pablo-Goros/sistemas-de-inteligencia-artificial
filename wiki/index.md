@@ -8,6 +8,7 @@
 - [Optimización matemática](topics/optimizacion-matematica.md)
 - [Teoría de la información](topics/teoria-de-la-informacion.md)
 - [Muestreo de distribuciones](topics/muestreo-de-distribuciones.md)
+- [Autovalores y autovectores](topics/autovalores-y-autovectores.md)
 
 ## Resolución y búsqueda
 
@@ -21,6 +22,9 @@
 - [Aprendizaje supervisado](topics/aprendizaje-supervisado.md)
 - [Evaluación de modelos](topics/evaluacion-de-modelos.md)
 - [Aprendizaje no supervisado](topics/aprendizaje-no-supervisado.md)
+- [Mapas autoorganizados de Kohonen](topics/mapas-autoorganizados-de-kohonen.md)
+- [Análisis de componentes principales](topics/analisis-componentes-principales.md)
+- [Reglas de Oja y Sanger](topics/reglas-de-oja-y-sanger.md)
 - [Regularización](topics/regularizacion.md)
 - [Normalización de datos](topics/normalizacion-de-datos.md)
 - [Perceptrón simple](topics/perceptron-simple.md)
@@ -31,6 +35,8 @@
 - [Autoencoders variacionales](topics/autoencoders-variacionales.md)
 - [Redes neuronales convolucionales](topics/redes-neuronales-convolucionales.md)
 - [Redes generativas adversarias](topics/redes-generativas-adversarias.md)
+- [Redes neuronales recurrentes](topics/redes-neuronales-recurrentes.md)
+- [Modelos de difusión](topics/modelos-de-difusion.md)
 - [Transformers](topics/transformers.md)
 
 ## Práctica y datos

@@ -1,7 +1,7 @@
 ---
 title: "Ciencia de datos"
 aliases: ["data science", "EDA", "ETL", "calidad de datos", "frontera digital"]
-sources: ["OFF-001"]
+sources: ["OFF-001", "OFF-021"]
 related: ["aprendizaje-automatico", "evaluacion-de-modelos", "aprendizaje-profundo"]
 prerequisites: ["aprendizaje-automatico"]
 ---
@@ -19,6 +19,12 @@ La ciencia de datos reúne generación, almacenamiento, curado, análisis, model
 - Optimizar un indicador puede generar consecuencias contrarias al objetivo real si el indicador no representa adecuadamente el problema. [OFF-001, p. 206]
 - La frontera digital representa las actividades automatizadas; empujar esa frontera es una fuente de innovación y puede producir capacidades superhumanas en tareas específicas. [OFF-001, pp. 207-208]
 
+## Errores de interpretación y variables espurias
+
+La presentación advierte sobre seleccionar resultados que favorecen una afirmación (cherry picking), encontrar correlaciones por azar al explorar datos, confundir correlación con causalidad y extraer conclusiones de muestras no representativas. También menciona la paradoja de Simpson: una tendencia observada por grupos puede desaparecer al combinar los datos. [OFF-021, p. 99]
+
+Los ejemplos de imágenes médicas ilustran cómo un modelo puede aprovechar edad, postura del paciente o texto que identifica un hospital en lugar de la señal clínica buscada. Esto exige revisar qué información permite predecir la etiqueta y cómo se construyó el conjunto de datos. [OFF-021, p. 100]
+
 ## Relationships
 
 La ciencia de datos prepara y contextualiza los datos que consume el [aprendizaje automático](aprendizaje-automatico.md). La [evaluación de modelos](evaluacion-de-modelos.md) debe considerar sesgos, balance de clases y el contexto de la decisión, no solo una métrica.
@@ -30,3 +36,4 @@ Se debe poder explicar EDA, curado de datos, garbage in/garbage out y sesgos de 
 ## Sources
 
 - [OFF-001, pp. 203-208]
+- [OFF-021, pp. 99-100]

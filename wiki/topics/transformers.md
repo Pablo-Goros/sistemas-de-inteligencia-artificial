@@ -1,7 +1,7 @@
 ---
 title: "Transformers"
 aliases: ["Transformer", "attention", "self-attention", "embedding", "Encoder", "Decoder", "multi-head attention", "positional encoding"]
-sources: ["OFF-001", "EXT-001", "OFF-018", "OFF-020"]
+sources: ["OFF-001", "EXT-001", "OFF-024"]
 related: ["aprendizaje-profundo", "autoencoders", "aprendizaje-supervisado"]
 prerequisites: ["aprendizaje-profundo", "aprendizaje-supervisado"]
 ---
@@ -28,18 +28,18 @@ Los embeddings de entrada se agrupan en `X`. Tres matrices de pesos aprendidas p
 Z=\operatorname{softmax}\!\left(\frac{QK^T}{\sqrt{d_k}}\right)V.
 \]
 
-`d_k` es la dimensión de las keys. El resultado es una representación contextual por token: sus pesos determinan cuánto aporta cada value. [OFF-018, pp. 12-16]
+`d_k` es la dimensión de las keys. El resultado es una representación contextual por token: sus pesos determinan cuánto aporta cada value. [OFF-024, pp. 12-16]
 
-La notación gráfica de las pp. 14-15 escribe Softmax al lado de cada score individual. Aquí se explicita que la normalización se aplica sobre el conjunto de scores de una query, en correspondencia con la fórmula matricial de la p. 16. [OFF-018, pp. 14-16]
+La notación gráfica de las pp. 14-15 escribe Softmax al lado de cada score individual. Aquí se explicita que la normalización se aplica sobre el conjunto de scores de una query, en correspondencia con la fórmula matricial de la p. 16. [OFF-024, pp. 14-16]
 
 ### Múltiples cabezas, posición y bloques
 
-- **Multi-head attention:** utiliza varios conjuntos de proyecciones Q, K y V, llamados cabezas, para atender a distintas posiciones simultáneamente. Los diagramas ilustran diferentes relaciones capturadas por las cabezas. [OFF-018, pp. 18-19]
-- **Positional encoding:** agrega a cada embedding un vector que representa la posición. La variante ilustrada usa `PE(pos,2i) = sin(pos/10000^(2i/d))` y `PE(pos,2i+1) = cos(pos/10000^(2i/d))`, donde `d` es la dimensión del embedding y `i` identifica el par de componentes. [OFF-018, pp. 20-21]
-- **Encoder:** combina self-attention y una red feed-forward. Los tokens se relacionan en la atención y pasan por la misma transformación feed-forward aplicada a cada posición; esos caminos pueden procesarse en paralelo. [OFF-018, pp. 9, 17]
-- **Decoder:** además de atender a los tokens previos de su salida, incluye atención encoder-decoder para usar la representación de entrada. La última salida pasa por una capa lineal que produce logits del vocabulario y por Softmax para obtener probabilidades. [OFF-018, pp. 9-10, 22-23]
+- **Multi-head attention:** utiliza varios conjuntos de proyecciones Q, K y V, llamados cabezas, para atender a distintas posiciones simultáneamente. Los diagramas ilustran diferentes relaciones capturadas por las cabezas. [OFF-024, pp. 18-19]
+- **Positional encoding:** agrega a cada embedding un vector que representa la posición. La variante ilustrada usa `PE(pos,2i) = sin(pos/10000^(2i/d))` y `PE(pos,2i+1) = cos(pos/10000^(2i/d))`, donde `d` es la dimensión del embedding y `i` identifica el par de componentes. [OFF-024, pp. 20-21]
+- **Encoder:** combina self-attention y una red feed-forward. Los tokens se relacionan en la atención y pasan por la misma transformación feed-forward aplicada a cada posición; esos caminos pueden procesarse en paralelo. [OFF-024, pp. 9, 17]
+- **Decoder:** además de atender a los tokens previos de su salida, incluye atención encoder-decoder para usar la representación de entrada. La última salida pasa por una capa lineal que produce logits del vocabulario y por Softmax para obtener probabilidades. [OFF-024, pp. 9-10, 22-23]
 
-La dimensión 512 de los embeddings corresponde al ejemplo presentado por la clase; no es una condición de la definición general de atención que expresa su fórmula. [OFF-018, pp. 11, 16]
+La dimensión 512 de los embeddings corresponde al ejemplo presentado por la clase; no es una condición de la definición general de atención que expresa su fórmula. [OFF-024, pp. 11, 16]
 
 ## Funcionamiento
 
@@ -47,13 +47,9 @@ Se tokeniza la entrada, se generan embeddings, se calculan puntuaciones de atenc
 
 ### Ejemplo de entrenamiento y aplicaciones
 
-Para traducir «gracias» a «thanks», la clase fija un vocabulario de salida y compara la distribución predicha con una distribución objetivo que asigna toda la probabilidad al token correcto. La retropropagación ajusta los pesos a partir de esa diferencia. Las diapositivas también señalan el costo computacional del entrenamiento. [OFF-018, pp. 25-28]
+Para traducir «gracias» a «thanks», la clase fija un vocabulario de salida y compara la distribución predicha con una distribución objetivo que asigna toda la probabilidad al token correcto. La retropropagación ajusta los pesos a partir de esa diferencia. Las diapositivas también señalan el costo computacional del entrenamiento. [OFF-024, pp. 25-28]
 
-Los ejemplos del material incluyen generación y completado de texto, traducción, procesamiento de imágenes, reconocimiento de audio y generación musical. Las capturas de servicios y las listas de modelos corresponden a la presentación; no constituyen un catálogo actualizado de productos. [OFF-018, pp. 30-55]
-
-## Aplicación práctica: temas de ensayo y debate
-
-El TP6 propone como disparadores comparar implementaciones como GPT y BERT, estudiar usos en juegos de estrategia o detección de anomalías, explicar herramientas de asistencia de código, analizar CLIP y generación de imágenes, o investigar aplicaciones interdisciplinarias y de audio. También invita a debatir comprensión y apertura de los modelos. Son **opciones temáticas**, no una obligación de implementar esos sistemas ni afirmaciones demostradas por la consigna. Las condiciones generales del ensayo se resumen en [introducción a la IA](introduccion-inteligencia-artificial.md). [OFF-020, pp. 2, 4-5]
+Los ejemplos del material incluyen generación y completado de texto, traducción, procesamiento de imágenes, reconocimiento de audio y generación musical. Las capturas de servicios y las listas de modelos corresponden a la presentación; no constituyen un catálogo actualizado de productos. [OFF-024, pp. 30-55]
 
 ## Relaciones
 
@@ -63,5 +59,4 @@ Los Transformers son una arquitectura de [aprendizaje profundo](aprendizaje-prof
 
 - [OFF-001, pp. 193-200]
 - [EXT-001, pp. 49-51]
-- [OFF-018, pp. 5-28, 30-55]
-- [OFF-020, pp. 2, 4-5]
+- [OFF-024, pp. 5-28, 30-55]
