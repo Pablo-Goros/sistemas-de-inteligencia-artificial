@@ -48,7 +48,7 @@ La wiki permite orientarse por concepto; las referencias de cada bloque indican 
 - **Preguntas guía:** si una capa oculta puede aproximar funciones, ¿qué motiva usar más capas?, ¿qué sigue definiendo quien diseña el sistema?, ¿por qué el hardware importa?
 - **Fuentes:** OFF-001, pp. 145-152; OFF-021, pp. 19-20, 33-52, 107; EXT-001, p. 40, solo como repaso. Wiki: [aprendizaje profundo](../wiki/topics/aprendizaje-profundo.md).
 
-### 3. [in progress] CNN: estructura espacial y representaciones jerárquicas
+### 3. [covered] CNN: estructura espacial y representaciones jerárquicas
 
 - **Alcance:** convolución y filtros aprendidos, campos locales, pesos compartidos, canales, padding, stride, ReLU, pooling y salida de clasificación; introducir ResNet y U-Net.
 - **Resultados de aprendizaje:** calcular una operación local y dimensiones de salida en un caso sencillo; distinguir filtros, canales y activaciones; explicar cómo se entrenan pesos reutilizados y por qué una CNN aprovecha la estructura espacial.
@@ -57,7 +57,7 @@ La wiki permite orientarse por concepto; las referencias de cada bloque indican 
 - **Preguntas guía:** ¿qué cambia frente a una capa totalmente conectada?, ¿pooling tiene pesos?, ¿un canal equivale siempre a un color?, ¿qué información recuperan las conexiones de U-Net?
 - **Fuentes:** OFF-001, pp. 173-185, especialmente 174-175 y 178-185; OFF-021, pp. 54, 72. Wiki: [redes convolucionales](../wiki/topics/redes-neuronales-convolucionales.md).
 
-### 4. [pending] Autoencoders: reconstrucción y estructura latente
+### 4. [covered] Autoencoders: reconstrucción y estructura latente
 
 - **Alcance:** encoder, código latente, decoder y pérdida de reconstrucción; relación con PCA y variantes denoising, contractive y sparse; aplicaciones y límites de la reconstrucción.
 - **Resultados de aprendizaje:** identificar qué entrada y objetivo se usan para entrenar; explicar qué restricciones favorecen una representación útil; distinguir compresión, eliminación de ruido y detección de anomalías.
@@ -66,7 +66,7 @@ La wiki permite orientarse por concepto; las referencias de cada bloque indican 
 - **Preguntas guía:** ¿por qué copiar la entrada puede enseñar algo?, ¿qué evita una copia trivial?, ¿en qué condiciones se conecta con PCA?, ¿reconstruir bien garantiza generar bien?
 - **Fuentes:** OFF-001, pp. 153-159; OFF-021, p. 59. Wiki: [autoencoders](../wiki/topics/autoencoders.md); apoyo conceptual: [PCA](../wiki/topics/analisis-componentes-principales.md).
 
-### 5. [pending] VAE: generación, inferencia variacional y reparametrización
+### 5. [covered] VAE: generación, inferencia variacional y reparametrización
 
 - **Alcance:** estructurar probabilísticamente el espacio latente; distinguir posterior aproximada, prior y decoder; comprender el objetivo variacional y el paso estocástico diferenciable.
 - **Resultados de aprendizaje:** explicar qué produce el encoder de un VAE; interpretar los términos de reconstrucción y KL; seguir una muestra y el recorrido del gradiente; distinguir entrenamiento de generación.
@@ -75,7 +75,7 @@ La wiki permite orientarse por concepto; las referencias de cada bloque indican 
 - **Preguntas guía:** ¿por qué introducir una distribución?, ¿qué regulariza KL?, ¿qué cambia al fijar el ruido durante el cálculo de una derivada?, ¿de dónde sale un código al generar sin una entrada?
 - **Fuentes:** OFF-001, pp. 158-167; apoyo de probabilidad e información en pp. 167-169. OFF-021, pp. 59-60, como ubicación de la familia. Wiki: [autoencoders](../wiki/topics/autoencoders.md), cuyo resumen se amplía aquí con el desarrollo del apunte.
 
-### 6. [pending] RNN y LSTM: estado y profundidad temporal
+### 6. [covered] RNN y LSTM: estado y profundidad temporal
 
 - **Alcance:** recurrencia, estado oculto, despliegue temporal y parámetros compartidos; dificultades de dependencias largas; estado de celda y compuertas LSTM.
 - **Resultados de aprendizaje:** desplegar una RNN durante pocos pasos; distinguir profundidad espacial y temporal; interpretar el control de información de una LSTM sin atribuirle memoria ilimitada.
@@ -84,7 +84,7 @@ La wiki permite orientarse por concepto; las referencias de cada bloque indican 
 - **Preguntas guía:** ¿qué viaja entre instantes?, ¿cada paso introduce pesos nuevos?, ¿estado de celda y estado oculto son lo mismo?, ¿por qué el tiempo crea una cadena profunda?
 - **Fuentes:** OFF-021, pp. 40-42, 55-57; OFF-001, pp. 193-195. Wiki: [redes recurrentes](../wiki/topics/redes-neuronales-recurrentes.md).
 
-### 7. [pending] GAN: generación mediante entrenamiento adversarial
+### 7. [covered] GAN: generación mediante entrenamiento adversarial
 
 - **Alcance:** generador, discriminador, ruido latente, objetivo minimax, entrenamiento alternado, equilibrio ideal y colapso modal.
 - **Resultados de aprendizaje:** explicar qué recibe y optimiza cada red; interpretar el objetivo adversarial y el flujo del gradiente al generador; distinguir equilibrio ideal de comportamiento real durante el entrenamiento.
@@ -93,7 +93,7 @@ La wiki permite orientarse por concepto; las referencias de cada bloque indican 
 - **Preguntas guía:** ¿el generador recibe una imagen objetivo para cada ruido?, ¿cómo aprende del discriminador?, ¿una salida cercana a azar prueba por sí sola que se aprendió la distribución?, ¿qué significa colapso modal?
 - **Fuentes:** OFF-001, pp. 187-190; OFF-021, pp. 61-64. Wiki: [GAN](../wiki/topics/redes-generativas-adversarias.md).
 
-### 8. [pending] Transformers: tokens, atención y procesamiento de secuencias
+### 8. [covered] Transformers: tokens, atención y procesamiento de secuencias
 
 - **Alcance:** tokenización, embeddings e información posicional; Query, Key, Value y atención escalada; arquitectura encoder-decoder, atención causal y atención entre entrada y salida.
 - **Resultados de aprendizaje:** calcular un ejemplo pequeño de atención como combinación ponderada; explicar qué aprende cada proyección; distinguir funciones de encoder y decoder y justificar la restricción a información previa durante generación.
@@ -102,7 +102,7 @@ La wiki permite orientarse por concepto; las referencias de cada bloque indican 
 - **Preguntas guía:** ¿token e embedding son lo mismo?, ¿de dónde vienen Q, K y V?, ¿qué información aporta la posición?, ¿qué diferencia hay entre self-attention y cross-attention?, ¿encoder/decoder significa lo mismo que en un autoencoder?
 - **Fuentes:** OFF-001, pp. 193-200, especialmente 195-199; OFF-021, pp. 66-67, 73. Wiki: [Transformers](../wiki/topics/transformers.md).
 
-### 9. [pending] Difusión: generación por eliminación de ruido y condicionamiento
+### 9. [in progress] Difusión: generación por eliminación de ruido y condicionamiento
 
 - **Alcance:** proceso directo de ruido y proceso inverso aprendido; difusión en espacio latente e integración de VAE, U-Net, atención y codificador de condición.
 - **Resultados de aprendizaje:** reconstruir el flujo de generación del diagrama de difusión latente; asignar una función a cada componente; distinguir eliminación de ruido en varios pasos de una reconstrucción directa por autoencoder.
